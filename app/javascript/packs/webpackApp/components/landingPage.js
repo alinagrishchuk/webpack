@@ -1,12 +1,25 @@
 import React from 'react';
 
-class LandingPage extends React.Component {
+import Pricing from './landingPage/pricing';
+import Pitch from './landingPage/pitch';
+
+export class LandingPage extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <div>
-        <h1>Hello World</h1>
+        <Pitch {...this.props} />
+        <Pricing {...this.props}/>
       </div>
     );
   }
 }
-export default LandingPage;
+
+export const ExtendedLandingPage = (props) => {
+  return (
+    <LandingPage
+      name='Alina'
+      {...props}
+    />
+  );
+};

@@ -4,12 +4,12 @@ import {
   Route,
 } from 'react-router-dom';
 
-import LandingPage from './components/landingPage';
+import { ExtendedLandingPage } from './components/landingPage';
 
 const App = props => (
   <Router>
     <div>
-      <Route exact path='/' component={LandingPage} />
+      <Route exact path='/' component={ExtendedLandingPage} />
     </div>
   </Router>
 );
